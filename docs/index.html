@@ -135,7 +135,8 @@
         formData.email = document.getElementById("email").value;
         formData.phone = document.getElementById("phone").value;
         formData.consent = document.getElementById("consent").checked;
-
+        formData.turnstile = document.querySelector('.cf-turnstile input[name="cf-turnstile-response"]').value;
+        
         fetch("https://prod-150.westeurope.logic.azure.com:443/workflows/efdb47a6fe92463bbb3820d1165dae5e/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=tOP6phwPfoOCP-uGuZsdEsSBUuy0rpS6M6ZjZ0NTtJM", {
           method: "POST",
           headers: {
@@ -202,7 +203,7 @@
         <input type="checkbox" id="consent" name="consent" required>
         I agree to Capital International Group sending me communications, as described in the <a href="https://www.capital-iom.com/privacy-policy" target="_blank">Privacy &amp; Cookie Policy</a>.
       </label>
-      <div class="cf-turnstile" data-sitekey="0x4AAAAAABq2rSdjpa7wACGC" data-callback="function (token) { alert ('Token: '+token)}" data-theme="light"></div>
+      <div class="cf-turnstile" data-sitekey="0x4AAAAAABq2rSdjpa7wACGC" data-theme="light"></div>
       <button type="button" class="option-button" id="back">Back</button>
       <button type="submit">Submit</button>
     </div>
