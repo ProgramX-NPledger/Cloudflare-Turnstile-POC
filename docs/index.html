@@ -202,7 +202,7 @@
         <input type="checkbox" id="consent" name="consent" required>
         I agree to Capital International Group sending me communications, as described in the <a href="https://www.capital-iom.com/privacy-policy" target="_blank">Privacy &amp; Cookie Policy</a>.
       </label>
-      <div class="cf-turnstile" data-sitekey="0x4AAAAAABq2rSdjpa7wACGC" data-callback="alert('hello')" data-theme="light"></div>
+      <div class="cf-turnstile" data-sitekey="0x4AAAAAABq2rSdjpa7wACGC" data-callback="function (token) { alert ('Token: '+token)}" data-theme="light"></div>
       <button type="button" class="option-button" id="back">Back</button>
       <button type="submit">Submit</button>
     </div>
